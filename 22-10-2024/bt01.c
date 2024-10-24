@@ -44,7 +44,7 @@ void bai01()
         // Kiểm tra điều kiện 0 < m < n
         if (m < 0 || m > n)
         {
-            printf("Out of range!\n");
+            printf("Ngoài phạm vi!\n");
         }
         else
         {
@@ -58,9 +58,16 @@ void bai01()
     {
         if (m % i == 0 && n % i == 0)
         {
-            printf("%d, ", i);
+            printf("%d \n", i);
         }
     }
+
+	 float resul = 0.0;
+    for ( int i = 1; i <= n - m; i++)
+    {
+        resul += pow(-1, i) / (float)(i);
+    }
+    printf("T = %f \n", resul);
 }
 
 int main(int argc, char const *argv[])
